@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "Stealth Mode",
+  "description": "Removes the like button from Facebook.",
+  "version": "1.0.0",
+
+  "icons": {
+    "128": "ninja-logo.png"
+  },
+
+  "permissions": [
+    "https://www.facebook.com/",
+    "http://www.facebook.com/"
+  ],
+
+   "content_scripts": [
+    {
+      "matches": ["http://www.facebook.com/*", "https://www.facebook.com/*"],
+      "js": ["jquery-2.2.0.min.js", "stealth.js"]
+    }
+  ],
+
+  "page_action": {
+    "default_title": "Stealth Mode",
+    "default_icon": "ninja-logo.png"
+  }
+}
